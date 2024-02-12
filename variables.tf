@@ -10,3 +10,9 @@ variable "db_password" {
   description = "RDS root user password"
   sensitive   = true
 }
+
+variable "new_test_variable" {
+  description = "Test"
+  sensitive   = true
+}
+

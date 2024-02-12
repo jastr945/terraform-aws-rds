@@ -65,7 +65,7 @@ resource "random_pet" "random" {
 }
 
 resource "aws_db_instance" "education" {
-  identifier             = "${var.db_name}-${random_pet.random.id}"
+  identifier             = "${var.db_name}-${random_pet.random.id}-${var.new_test_variable}"
   instance_class         = "db.t3.micro"
   allocated_storage      = 5
   engine                 = "postgres"
@@ -77,4 +77,5 @@ resource "aws_db_instance" "education" {
   parameter_group_name   = aws_db_parameter_group.education.name
   publicly_accessible    = true
   skip_final_snapshot    = true
+  storage_encrypted      = var.db_encrypted
 }
