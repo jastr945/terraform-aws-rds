@@ -11,8 +11,8 @@ variable "db_password" {
   sensitive   = true
 }
 
-variable "new_test_variable" {
-  description = "Test"
-  sensitive   = true
+variable "db_encrypted" {
+  description = "Db encryption flag"
+  type        = bool
 }
 
