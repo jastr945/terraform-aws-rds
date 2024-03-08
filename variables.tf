@@ -14,5 +14,6 @@ variable "db_password" {
 variable "db_encrypted" {
   description = "Db encryption flag"
   type        = bool
+  default     = false
 }
 
