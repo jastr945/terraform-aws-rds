@@ -19,4 +19,5 @@ variable "db_encrypted" {
 
 variable "db_engine" {
   description = "RDS version"
+  default     = "14.11"
 }
