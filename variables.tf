@@ -1,4 +1,4 @@
-variable "db_name" {
+avariable "db_name" {
   description = "Unique name to assign to RDS instance"
 }
 
@@ -12,7 +12,7 @@ variable "db_password" {
 }
 
 variable "db_encrypted" {
-  description = "Db encryption bool flag"
+  description = "Db encryption boolean flag"
   type        = bool
   default     = false
 }
