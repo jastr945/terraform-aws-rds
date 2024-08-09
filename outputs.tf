@@ -16,3 +16,7 @@ output "rds_username" {
   value       = aws_db_instance.education.username
 }
 
+output "lb_arn" {
+  description = "The ARN of the load balancer."
+  value       = aws_lb.aws_lb.arn
+}
