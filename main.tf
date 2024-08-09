@@ -81,7 +81,7 @@ resource "aws_db_instance" "education" {
 }
 
 resource "aws_lb" "aws_lb" {
-  name               = "${var.db_name}-aws-lb-${local.random_id}"
+  name               = "${var.db_name}-aws-lb-demo"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.rds.id]
