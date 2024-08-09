@@ -79,3 +79,18 @@ resource "aws_db_instance" "education" {
   publicly_accessible    = true
   skip_final_snapshot    = true
 }
+
+resource "aws_lb" "aws_lb" {
+  name               = "${var.db_name}-aws-lb-${local.random_id}"
+  internal           = false
+  load_balancer_type = "application"
+  security_groups    = [aws_security_group.rds.id]
+  subnets            = module.vpc.public_subnets
+
+  enable_deletion_protection = false
+
+  tags = {
+    Environment = "Dev",
+    Name = "demo_rds"
+  }
+}
